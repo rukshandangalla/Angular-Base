@@ -49,7 +49,7 @@ export class ProductListComponent implements OnInit {
         }
     ];
 
-    constructor(){
+    constructor() {
         this.filteredProducts = this.products;
         this.listFilter = 'cart';
     }
@@ -67,5 +67,9 @@ export class ProductListComponent implements OnInit {
 
     ngOnInit(): void {
         console.log('In On Init');
+    }
+
+    onRatingClicked(message: string): void {
+        this.pageTitle = `Product List ${message}`;
     }
 }
